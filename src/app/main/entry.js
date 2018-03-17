@@ -14,9 +14,8 @@ import store, { history } from '../core/store'
 
 import AbstractEntry from '../core/entry'
 
-import AddNew from './add-new'
+import AddItem from './add-item'
 import List from './list'
-import Sidebar from './sidebar'
 
 // eslint-disable-next-line no-undef
 const browser = window
@@ -40,9 +39,9 @@ class MainEntry extends AbstractEntry {
         <ConnectedRouter history={history}>
           <div className="create-an-awesome-spa__wrapper">
             <main className="create-an-awesome-spa__panel">
-              <AddNew/>
+              <AddItem/>
 
-              <Route exact path="/listing/" component={ () => (<p> { 'hey I\'m a listing' } </p>) } />
+              <Route exact path="/listing/" component={List} />
             </main>
           </div>
         </ConnectedRouter>
