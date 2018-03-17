@@ -11,6 +11,8 @@ Please, `make i` or `make install`
 ## How to run
 Just `make run` and we're ready to rock! Access your http://localhost:3000/
 
+### Why does this exist?
+Because it makes easier to get this move forward in terms of developing a product or website from scratch. I developed this based on some experiences I had when creating applications in Vue.js, Backbone, React and Angular v(1|2).x
 
 ## Todo
 - [ ] Improve README.md
