@@ -1,0 +1,21 @@
+{
+  "name": "create-an-awesome-spa",
+  "description": "👀 No server-side rendering, only a basic spa in react+redux built with <3",
+  "repository": "https://github.com/guicheffer/create-an-awesome-spa",
+  "logo": "",
+  "keywords": [
+    "react",
+    "redux",
+    "reactredux",
+    "html5",
+    "css3",
+    "jest",
+    "webpack",
+    "stylus",
+    "es6",
+    "nightwatch",
+    "spa",
+    "crud",
+    "localstorage"
+  ]
+}
