@@ -16,7 +16,12 @@
 
 	<script>
     function getInitializationData () {
-      return {}
+      return {
+        welcomeMessage: {
+          hi: '%c@guicheffer%c says: %c"I hope you enjoy!"',
+          link: '👉🏼 Please check my %cGitHub %cprofile: https://github.com/guicheffer 👀'
+        }
+      }
     }
 
 	  function setupApp (options) {
@@ -30,7 +35,7 @@
 </head>
 <body>
   <div class="create-an-awesome-spa__container">
-		<div id="app-create-an-awesome-spa"> Loading... </div>
+		<div id="app-create-an-awesome-spa" class="create-an-awesome-spa__wrapper"> Loading... </div>
 	</div>
 
   <%= require('html-loader!./footer/footer.html') %>

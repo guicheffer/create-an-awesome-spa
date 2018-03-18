@@ -19,8 +19,6 @@ class List extends Component {
     )
   }
 
-  shouldComponentUpdate () { return true }
-
   _createRow (item, key) {
     return (
       <tr key={key}>
@@ -31,9 +29,7 @@ class List extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  items: state.items,
-})
+const mapStateToProps = state => ({ items: state.items })
 
 export default connect(
   mapStateToProps,

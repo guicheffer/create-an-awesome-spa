@@ -17,6 +17,7 @@
 
 @import 'palette';
 @import 'typography';
+@import 'utils';
 
 @import 'layout';
 
@@ -51,6 +52,18 @@ body, input, a {
 .create-an-awesome-spa {
   create-an-awesome-spa-layout();
   create-an-awesome-spa-layout-responsive();
+
+  &__wrapper {
+    please-align-it-center()
+  }
+
+  &__panel {
+    $width = 420px;
+
+    border: 1px solid #fff;
+    padding: $spacing-large;
+    width: $width;
+  }
 
   &__footer {
     footer();

@@ -5,7 +5,7 @@
 Please, `make i` or `make install`
 
 ## How to contribute
-- Run the command `make watch` for watching updates or `make build` to get project assets compiled.
+- Run the command `make watch` for watching updates or `make build` to get project assets compiled. (`make build-prod` should resolve prod dependencies)
 - Commit your changes, then create your pull request
 
 ## How to run

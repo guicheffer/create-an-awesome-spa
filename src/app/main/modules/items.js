@@ -2,16 +2,13 @@ export const ADD_ITEM = 'items/ADD_ITEM'
 
 const initialState = [
   {
-    name: 'E.T.',
-    species: ['anunnakis', 'greys'],
+    name: 'Item 1',
   },
   {
-    name: 'Chewbacca',
-    species: ['unknown'],
+    name: 'Item 2',
   },
   {
-    name: 'Me',
-    species: ['unknown'],
+    name: 'Item 3',
   },
 ]
 
@@ -33,10 +30,6 @@ export default (state = initialState, action) => {
 
 export const addItem = (item) => {
   const trigger = (dispatch) => {
-    // dispatch({
-    //   type: NEW_ITEM,
-    // })
-
     dispatch({
       type: ADD_ITEM,
       data: { item },
