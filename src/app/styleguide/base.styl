@@ -63,6 +63,19 @@ body, input, a {
     border: 1px solid #fff;
     padding: $spacing-large;
     width: $width;
+
+    .panel {
+      &__list {
+        .list {
+          &__content {
+            margin: $spacing-large 0 0;
+            width: 100%;
+
+            th, td { border: 1px solid #fff; }
+          }
+        }
+      }
+    }
   }
 
   &__footer {

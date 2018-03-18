@@ -3,32 +3,15 @@ import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { addItem } from './modules/items'
+import Button from 'react-toolbox/lib/button'
+
+import { addItem } from '../modules/items'
 
 // eslint-disable-next-line no-undef
 const browser = window
 const DEFAULT_MAX_LENGTH = 30
 
 class AddNew extends Component {
-  _afterAdding () {
-    this.props.changePage()
-    this.input.value = ''
-  }
-
-  componentDidMount () { this.input.focus() }
-
-  handleSubmit (e) {
-    e.preventDefault()
-    e.stopPropagation()
-
-    const name = this.input.value
-
-    this.props.addItem({ name })
-    this._afterAdding()
-
-    return true
-  }
-
   render () {
     return (
       <section className="panel__add-new">
@@ -43,17 +26,37 @@ class AddNew extends Component {
             maxLength={DEFAULT_MAX_LENGTH}
             name="name"
             pattern={`[A-Za-z0-9 ]{3,${DEFAULT_MAX_LENGTH}}`}
-            placeholder="Name"
+            placeholder="The item name"
             ref={(input) => { this.input = input }}
             required="required"
             spellCheck="false"
             type="text"
           />
 
-          <button type="submit"> Add </button>
+          <Button type="submit" label="Add" raised primary />
         </form>
       </section>
     )
+  }
+
+  _afterAdding () {
+    this.props.changePage()
+    this.input.value = ''
+    this.input.focus()
+  }
+
+  componentDidMount () { this.input.focus() }
+
+  handleSubmit (e) {
+    e.preventDefault()
+    e.stopPropagation()
+
+    const name = this.input.value
+
+    this.props.addItem({ name })
+    this._afterAdding()
+
+    return true
   }
 }
 

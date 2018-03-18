@@ -17,6 +17,7 @@
 	<script>
     function getInitializationData () {
       return {
+        metaTitle: window.document.title,
         welcomeMessage: {
           hi: '%c@guicheffer%c says: %c"I hope you enjoy!"',
           link: '👉🏼 Please check my %cGitHub %cprofile: https://github.com/guicheffer 👀'
@@ -27,9 +28,7 @@
 	  function setupApp (options) {
 			options.before()
 
-			var app = new window.App.MainEntry({
-        initilizationData: getInitializationData()
-      })
+			var app = new window.App.MainEntry({ initilizationData: getInitializationData() })
 	  }
 	</script>
 </head>

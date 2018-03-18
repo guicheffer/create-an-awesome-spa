@@ -14,8 +14,8 @@ import store, { history } from '../core/store'
 
 import AbstractEntry from '../core/entry'
 
-import AddItem from './add-item'
-import List from './list'
+import AddItem from './components/add-item'
+import List from './pages/list'
 
 // eslint-disable-next-line no-undef
 const browser = window

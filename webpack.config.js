@@ -18,7 +18,7 @@ module.exports = function(env = {}) {
   cdnPath = cdnPath.replace(/^\'|\'$/g, '')
 
   const loaders = {
-    css: [
+    styl: [
       'raw-loader',
       {
         loader: 'postcss-loader',
@@ -106,8 +106,30 @@ module.exports = function(env = {}) {
         {
           test: /\.styl$/,
           use: plugins.extractEntryCSS.extract({
-            use: loaders.css,
+            use: loaders.styl,
           }),
+        },
+        {
+          // For React Toolbox
+          test: /\.css$/,
+          use: [
+            'style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 1,
+                localIdentName: '[name]--[local]--[hash:base64:8]',
+                modules: true,
+                sourceMap: true,
+              },
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: () => [require('postcss-cssnext')],
+              },
+            }
+          ],
         },
         {
           test: /(\.js|\.jsx)$/,
